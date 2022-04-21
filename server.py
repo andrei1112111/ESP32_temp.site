@@ -43,7 +43,7 @@ def send():
         if 'temperature' in request.form.keys():
             temp = f"{request.form['temperature']}°С"
             print(temp)
-            return '1'
+    return '1'
 
 
 if __name__ == '__main__':
