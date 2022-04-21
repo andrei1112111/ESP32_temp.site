@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Управление</title>
+</head>
+<body>
+<p>Температура: {{ data['temp'] }}</p>
+<form action="/control" method="post">
+    <button name="foo" value="upvote">Получить температуру</button>
+</form>
+<form action="/control" method="post">
+    <button name="fooo" value="upvote">{{ data['text'] }}</button>
+</form>
+</body>
+</html>
