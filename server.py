@@ -1,6 +1,7 @@
 import os
 from flask import request, render_template
 from flask import Flask
+import json
 
 app = Flask(__name__)
 
@@ -40,9 +41,8 @@ def command():
 def send():
     global temp, led
     if request.method == 'POST':
-        if 'temperature' in request.form.keys():
-            temp = f"{request.form['temperature']}°С"
-            print(temp)
+        temp = f"{json.loads(request.get_data())['temperature']}°С"
+        print(temp)
     return '1'
 
 
